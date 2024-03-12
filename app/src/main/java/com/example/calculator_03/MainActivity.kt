@@ -22,12 +22,13 @@ class MainActivity : AppCompatActivity() {
         val eightButton = findViewById<Button>(R.id.eight_button)
         val nineButton = findViewById<Button>(R.id.nine_button)
 
+        val pointButton = findViewById<Button>(R.id.point_button)
         val equalButton = findViewById<Button>(R.id.equal_button)
         val plusButton = findViewById<Button>(R.id.plus_button)
         val minusButton = findViewById<Button>(R.id.minus_button)
         val multiplyButton = findViewById<Button>(R.id.multiply_button)
         val divideButton = findViewById<Button>(R.id.divide_button)
-        val pointButton = findViewById<Button>(R.id.point_button)
+        val clearButton = findViewById<Button>(R.id.clear_button)
 
         val resultTextView = findViewById<TextView>(R.id.resultTextView)
 
@@ -107,6 +108,11 @@ class MainActivity : AppCompatActivity() {
         pointButton.setOnClickListener {
             numberStringBuilder.append(".")
             resultTextView.text = numberStringBuilder
+        }
+
+        clearButton.setOnClickListener{
+            numberStringBuilder.clear()
+            resultTextView.text = "0"
         }
 
         equalButton.setOnClickListener{
