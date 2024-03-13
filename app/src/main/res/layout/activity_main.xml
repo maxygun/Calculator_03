@@ -155,8 +155,17 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toTopOf="@id/multiply_button"
         app:layout_constraintRight_toLeftOf="@id/divide_button"
-        android:text="Clear"
+        android:text="CLEAR"
         android:id="@+id/clear_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        app:layout_constraintLeft_toLeftOf="@id/divide_button"
+        app:layout_constraintBottom_toTopOf="@id/divide_button"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="RESET"
+        android:id="@+id/reset_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"/>
 

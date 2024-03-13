@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         val multiplyButton = findViewById<Button>(R.id.multiply_button)
         val divideButton = findViewById<Button>(R.id.divide_button)
         val clearButton = findViewById<Button>(R.id.clear_button)
+        val resetButton = findViewById<Button>(R.id.reset_button)
 
         val resultTextView = findViewById<TextView>(R.id.resultTextView)
 
@@ -116,6 +117,12 @@ class MainActivity : AppCompatActivity() {
             resultTextView.text = "0"
         }
 
+        resetButton.setOnClickListener{
+            val lastIndex = numberStringBuilder.length - 1
+            numberStringBuilder.deleteCharAt(lastIndex)
+            resultTextView.text = numberStringBuilder
+        }
+
         equalButton.setOnClickListener{
 
             try{
@@ -134,6 +141,7 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+
 
 
     }
