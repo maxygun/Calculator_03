@@ -11,18 +11,19 @@ import com.ezylang.evalex.Expression
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
-    override fun onCreate(savedInstanceState: Bundle?) = with(binding) {
+    private val numberStringBuilder = StringBuilder()
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        val x = this
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
 
-        val resultTextView = findViewById<TextView>(R.id.resultTextView)
+        setListeners()
 
-        val numberStringBuilder = StringBuilder()
+    }
+
+    private fun setListeners() = with(binding) {
 
         zeroButton.setOnClickListener {
             numberStringBuilder.append(0)
@@ -112,25 +113,25 @@ class MainActivity : AppCompatActivity() {
         }
 
         equalButton.setOnClickListener{
-
-            try{
-
-                val stringExpression = numberStringBuilder.toString()
-                val expression = Expression (stringExpression)
-                val expressionResult = expression.evaluate().numberValue
-                resultTextView.text = expressionResult.toString()
-
-                numberStringBuilder.clear()
-                numberStringBuilder.append(expressionResult.toString())
-
-            } catch (t: Throwable){
-                Toast.makeText(this@MainActivity, "Exception: $t", Toast.LENGTH_LONG)
-                    .show()
-            }
+            calculate(resultTextView)
 
         }
+    }
 
+    private fun calculate(textView: TextView) {
+        try {
 
+            val stringExpression = numberStringBuilder.toString()
+            val expression = Expression(stringExpression)
+            val expressionResult = expression.evaluate().numberValue
+            textView.text = expressionResult.toString()
 
+            numberStringBuilder.clear()
+            numberStringBuilder.append(expressionResult.toString())
+
+        } catch (t: Throwable) {
+            Toast.makeText(this@MainActivity, "Exception: $t", Toast.LENGTH_LONG)
+                .show()
+        }
     }
 }
