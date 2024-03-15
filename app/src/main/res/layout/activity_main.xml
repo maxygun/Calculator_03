@@ -16,7 +16,7 @@
       app:layout_constraintBottom_toTopOf="@id/reset_button"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+      app:layout_constraintTop_toTopOf="parent"/>
     
     <Button
         app:layout_constraintLeft_toLeftOf="parent"
@@ -31,8 +31,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:text="0"
         android:id="@+id/zero_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"/>
+        style="@style/RoundButtonStyle"/>
 
     <Button
         app:layout_constraintLeft_toRightOf="@id/zero_button"
@@ -48,24 +47,21 @@
         app:layout_constraintBottom_toTopOf="@id/point_button"
         android:text="1"
         android:id="@+id/one_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"/>
+        style="@style/RoundButtonStyle"/>
 
     <Button
         app:layout_constraintLeft_toRightOf="@id/one_button"
         app:layout_constraintBottom_toTopOf="@id/point_button"
         android:text="2"
-        android:id="@+id/two_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"/>
+        style="@style/RoundButtonStyle"
+        android:id="@+id/two_button"/>
 
     <Button
         app:layout_constraintLeft_toRightOf="@id/two_button"
         app:layout_constraintBottom_toTopOf="@id/point_button"
         android:text="3"
         android:id="@+id/three_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"/>
+        style="@style/RoundButtonStyle"/>
 
     <Button
         app:layout_constraintLeft_toRightOf="@id/three_button"
@@ -81,24 +77,21 @@
         app:layout_constraintBottom_toTopOf="@id/one_button"
         android:text="4"
         android:id="@+id/four_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"/>
+        style="@style/RoundButtonStyle"/>
 
     <Button
         app:layout_constraintLeft_toRightOf="@id/four_button"
         app:layout_constraintBottom_toTopOf="@id/two_button"
         android:text="5"
         android:id="@+id/five_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"/>
+        style="@style/RoundButtonStyle"/>
 
     <Button
         app:layout_constraintLeft_toRightOf="@id/five_button"
         app:layout_constraintBottom_toTopOf="@id/three_button"
         android:text="6"
         android:id="@+id/six_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"/>
+        style="@style/RoundButtonStyle"/>
 
     <Button
         app:layout_constraintLeft_toRightOf="@id/six_button"
@@ -114,24 +107,21 @@
         app:layout_constraintBottom_toTopOf="@id/four_button"
         android:text="7"
         android:id="@+id/seven_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"/>
+        style="@style/RoundButtonStyle"/>
 
     <Button
         app:layout_constraintLeft_toRightOf="@id/seven_button"
         app:layout_constraintBottom_toTopOf="@id/five_button"
         android:text="8"
         android:id="@+id/eight_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"/>
+        style="@style/RoundButtonStyle"/>
 
     <Button
         app:layout_constraintLeft_toRightOf="@id/eight_button"
         app:layout_constraintBottom_toTopOf="@id/six_button"
         android:text="9"
         android:id="@+id/nine_button"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"/>
+        style="@style/RoundButtonStyle"/>
 
     <Button
         app:layout_constraintLeft_toRightOf="@id/nine_button"
