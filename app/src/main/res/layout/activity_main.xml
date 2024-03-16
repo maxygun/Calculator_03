@@ -159,4 +159,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"/>
 
+    <Button
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/clear_button"
+        app:layout_constraintRight_toLeftOf="@id/divide_button"
+        android:text="History"
+        android:id="@+id/history_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
   </androidx.constraintlayout.widget.ConstraintLayout>
