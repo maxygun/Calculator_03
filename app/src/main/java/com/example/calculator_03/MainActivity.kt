@@ -121,7 +121,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         historyButton.setOnClickListener{
+
+            val h = historyList
             val intent = Intent(this@MainActivity, HistoryActivity::class.java)
+            intent.putExtra("history_list", historyList.toTypedArray())
             startActivity(intent)
             // відкриємо нове актівіті
             // передамо йому дані - історію
